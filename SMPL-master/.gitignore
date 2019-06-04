@@ -1,0 +1,4 @@
+*.pkl
+*.obj
+__pycache__/
+script.py
