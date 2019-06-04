@@ -2,17 +2,18 @@ import torch
 
 from smpl.pytorch.smpl_layer import SMPL_Layer
 from display_utils import display_model
-
+import sys
+import os
 
 if __name__ == '__main__':
     cuda = True
     batch_size = 1
-
+    model_path = os.path.join(os.path.abspath(os.path.dirname(os.getcwd())), 'SMPL_model\smpl\models')
     # Create the SMPL layer
     smpl_layer = SMPL_Layer(
         center_idx=0,
         gender='neutral',
-        model_root='D:\Research\SMPL\SMPL_model\smpl\models')
+        model_root= model_path)
 
     # Generate random pose and shape parameters
     pose_params = torch.rand(batch_size, 72) * 0.2

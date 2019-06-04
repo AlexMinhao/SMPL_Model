@@ -33,7 +33,7 @@ class SMPL_Layer(Module):
             self.model_path = os.path.join(model_root, 'basicModel_f_lbs_10_207_0_v1.0.0.pkl')
         elif gender == 'male':
             self.model_path = os.path.join(model_root, 'basicModel_m_lbs_10_207_0_v1.0.0.pkl')
-        model_raw_path = 'D:\\Research\\SMPL\\SMPL_model\\smpl\\models\\model.pkl'
+        model_raw_path = os.path.join(model_root, 'model.pkl')
         smpl_data = ready_arguments(model_raw_path)
         self.smpl_data = smpl_data
 
